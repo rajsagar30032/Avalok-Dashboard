@@ -1,0 +1,16 @@
+<div class="row pl-5">
+  <h1 class="display-4">
+    AVALOK
+    <small class="text-muted">Dashboard</small>
+  </h1>
+</div>
+<div class="row">
+  <div class="col-md-3 p-3">
+    <select class="custom-select" (change)="selectParam($event.target.value)">
+      <option *ngFor="let param of params" [value]="param.label">{{param.name}}</option>
+    </select>
+  </div>
+  <div class="col-md-9 p-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>
